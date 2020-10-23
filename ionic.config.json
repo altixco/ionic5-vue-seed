@@ -1,0 +1,7 @@
+{
+  "name": "ionic5-vue-seed",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

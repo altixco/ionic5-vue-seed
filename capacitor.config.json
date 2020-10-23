@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "ionic5-vue-seed",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
