@@ -6,6 +6,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
+      <!-- iOS only header replacement -->
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Tab 2</ion-title>

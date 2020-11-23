@@ -12,7 +12,7 @@
         </ion-card-content>
       </ion-card>
 
-      <ion-button class="ion-margin-top" color="medium" fill="clear" expand="full" :router-link="{ name: 'home' }">
+      <ion-button class="ion-margin-top" color="medium" fill="clear" expand="full" @click="toHome()">
         To&nbsp;<ion-text color="dark">Home</ion-text>
         <ion-icon :icon="arrowForward"></ion-icon>
       </ion-button>
@@ -56,10 +56,13 @@ export default defineComponent({
   },
   created() {
     if (this.$auth.isAuthenticated) {
-      this.$router.replace({ name: 'home' });
+      this.toHome();
     }
   },
   methods: {
+    toHome() {
+      this.$router.replace({ name: 'home' });
+    },
     async openLoginModal() {
       const loginModal = await modalController.create({
         component: Login,

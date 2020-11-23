@@ -2,17 +2,16 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 3</ion-title>
+        <ion-title>Profile</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">
+    <ion-content :fullscreen="true">
+      <!-- iOS only header replacement -->
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Tab 3</ion-title>
+          <ion-title size="large">Profile</ion-title>
         </ion-toolbar>
       </ion-header>
-
-      <h3>Profile page</h3>
 
       <ion-list>
         <ion-item @click="test()" button>
@@ -29,7 +28,9 @@
         </ion-item>
       </ion-list>
 
-      <p v-if="testResult">{{ testResult }}</p>
+      <div class="ion-padding">
+        <p v-if="testResult">{{ testResult }}</p>
+      </div>
     </ion-content>
   </ion-page>
 </template>
