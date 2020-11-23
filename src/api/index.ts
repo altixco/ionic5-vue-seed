@@ -38,7 +38,7 @@ axios.interceptors.response.use((response) => {
 
   // We should only try to refresh requests that are not related to OAUTH, otherwise we could get infinite bucle here
   const isNotAuthRequest = !error.config.url.startsWith(OAUTH_PREFIX);
-  if (error.response.status === 401 && error.config && isNotAuthRequest) {
+  if (error.response?.status === 401 && error.config && isNotAuthRequest) {
     // The status code 401 means that the token has expired
     if (firstRefreshTokenTry) {
       // If it's the first time refreshing token then try it
